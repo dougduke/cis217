@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pizza Shed</title>
+  <meta name="viewport" content="width=device-width, initial-scale = 1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css"/>
+</head>
+<body>
+
+<div data-role="page" id="main">
+
+  <div data-role="header" data-id="navbar" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#main" class="ui-btn-active ui-state-persist">Home</a></li>
+        <li><a href="#call">CALL US</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#order">Order</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#aboutUs">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div data-role="content" id="shedPic">
+    <h2>Pizza Shed</h2>
+    <img src="img/flickr_farmShed.jpg">
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <p>Doug Duke cis217 Summer 2014 Spokane Community College</p>
+  </div>
+
+</div>
+
+<div data-role="page" id="call">
+
+  <div data-role="header" data-id="navbar" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#main">Home</a></li>
+        <li><a href="#call" class="ui-btn-active ui-state-persist">CALL US</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#order">Order</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#aboutUs">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div data-role="content">
+    <ul>
+      <a data-role="button" href="tel:555-555-5555">Call Us</a>
+    </ul>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <p>Doug Duke cis217 Summer 2014 Spokane Community College</p>
+  </div>
+
+</div>
+
+<div data-role="page" id="menu">
+
+  <div data-role="header" data-id="navbar" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#main">Home</a></li>
+        <li><a href="#call">CALL US</a></li>
+        <li><a href="#menu" class="ui-btn-active ui-state-persist">Menu</a></li>
+        <li><a href="#order">Order</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#aboutUs">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div data-role="content">
+    <div data-product="1001" class="product">
+      <span data-name="pepperoni">Pepperoni</span>
+      <span data-price="3.95">$3.95</span>
+      <span class="description">Pepperoni disks</span>
+    </div>
+    <div data-product="1002" class="product">
+      <span data-name="xcheese">Extra Cheese</span>
+      <span data-price="3.95">$3.95</span>
+      <span class="description">Extra Mozzerella cheese</span>
+    </div>
+    <div data-product="1003" class="product">
+      <span data-name="mushrooms">Mushrooms</span>
+      <span data-price="3.95">$3.95</span>
+      <span class="description">Mushroom slices</span>
+    </div>
+    <div data-product="2001" class="product">
+      <span data-name="thin">Thin Crust</span>
+      <span data-price="3.95">$3.95</span>
+      <span class="description">Carribean Seasoned Thin Crust</span>
+    </div>
+    <div data-product="2002" class="product">
+      <span data-name="pan">Pan Crust</span>
+      <span data-price="3.95">$3.95</span>
+      <span class="description">Deep Pan Crust</span>
+    </div>
+    <div data-product="2003" class="product">
+      <span data-name="matzah">Matzah</span>
+      <span data-price="3.95">$3.95</span>
+      <span class="description">Matzah Crust of Tummel</span>
+    </div>
+    <div data-product="3001" class="product">
+      <span data-name="coke">Coke</span>
+      <span data-price="3.95">$3.95</span>
+      <span class="description">Classic Coka Cola</span>
+    </div>
+    <div data-product="3002" class="product">
+      <span data-name="root">Barqs Root Beer</span>
+      <span data-price="3.95">$3.95</span>
+      <span class="description">The Official Root Beer of Fun</span>
+    </div>
+    <div data-product="3003" class="product">
+      <span data-name="sprite">Sprite</span>
+      <span data-price="3.95">$3.95</span>
+      <span class="description">Bubbly Lightness</span>
+    </div>
+
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <p>Doug Duke cis217 Summer 2014 Spokane Community College</p>
+  </div>
+
+</div>
+
+<div data-role="page" id="order">
+
+  <div data-role="header" data-id="navbar" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#main">Home</a></li>
+        <li><a href="#call">CALL US</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#order" class="ui-btn-active ui-state-persist">Order</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#aboutUs">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div data-role="content">
+
+    <div id='cartDiv'>
+
+    </div>
+
+    <div>
+      <button id="buy">Buy Now</button>
+    </div>
+
+    <div>
+      <button id="saveOrder">Save Order</button>
+    </div>
+
+    <div>
+      <button id="loadOrder">Load Order</button>
+    </div>
+
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <p>Doug Duke cis217 Summer 2014 Spokane Community College</p>
+  </div>
+
+</div>
+
+<div data-role="page" id="location">
+
+  <div data-role="header" data-id="navbar" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#main">Home</a></li>
+        <li><a href="#call">CALL US</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#order">Order</a></li>
+        <li><a href="#location" class="ui-btn-active ui-state-persist">Location</a></li>
+        <li><a href="#aboutUs">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div data-role="content">
+    <p>Map</p>
+    <script>
+      navigator.geolocation.getCurrentPosition( function( pos ) {
+        var lat = pos.coords.latitude;
+        var lng = pos.coords.longitude;
+        $( "#lat" ).text( lat );
+        $( "#lng" ).text( lng );
+        var url = '<a href="http://maps.google.com/maps/dir/' + lat + ',' + lng + '/Round+Table+Pizza,+4510+S+Regal+St,+Spokane,+WA+99223">Directions</a>';
+        $( "#url" ).append( url );
+
+        var map = '<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d10759.004143191545!2d' + lng + '!3d' + lat + '!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!1i0!3e6!4m4!2s47.6118789%2C+-117.36149619999999+!3m2!1d47.6118789!2d-117.36149619999999!4m5!1s0x549e22557a31c4e3%3A0x19f835642ced293c!2sRound+Table+Pizza%2C+4510+S+Regal+St%2C+Spokane%2C+WA+99223!3m2!1d47.612369!2d-117.36944799999999!5e0!3m2!1sen!2sus!4v1406788439736" width="360" height="360" frameborder="0" style="border:0"></iframe>'
+        $( "#directionMap" ).html( map );
+      } )
+    </script>
+
+    <div id="directionMap"></div>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <p>Doug Duke cis217 Summer 2014 Spokane Community College</p>
+  </div>
+
+</div>
+
+<div data-role="page" id="aboutUs">
+
+  <div data-role="header" data-id="navbar" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#main">Home</a></li>
+        <li><a href="#call">CALL US</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#order">Order</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#aboutUs" class="ui-btn-active ui-state-persist">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div data-role="content">
+    <img src="img/flickr_farmShed.jpg">
+    <h2>About Us:</h2>
+    <p>The object is to allow you to tell us what kind of pizza you want. </p>
+    <p>It's your pizza, right? </p>
+    <p>Call us directly from the CALL US link above, or call (555) 555-5555</p>
+    <p>Or stop by at:</p>
+    <pre>
+      Pizza Shed
+      5555 S 55th St
+      Spokane, WA  99223
+    </pre>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <p>Doug Duke cis217 Summer 2014 Spokane Community College</p>
+  </div>
+
+</div>
+
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+
+<script>
+  var cart = [];
+
+  $( document ).ready( function() {
+
+    $( 'div[data-product]' ).each( function() {
+      $( this ).append( '<button class="btnCart">Add To Order</button>' );
+    } )
+
+    $( ".btnCart" ).on( "click", function( event ) {
+      var pid = $( this ).parent().data( "product" );
+      console.log( pid );
+      var obj = new Object();
+
+      if( cart[pid] ) {
+        cart[pid].qty += 1;
+      } else {
+        cart[pid] = new Object();
+        cart[pid].qty = 1;
+        cart[pid].pid = pid;
+        cart[pid].name = $( this ).siblings().data( "name" );
+        cart[pid].price = $( this ).siblings().next().data( "price" );
+      }
+
+      displayCart();
+    } )
+
+    function displayCart() {
+      var cartDiv = $( '#cartDiv' );
+      cartDiv.html( "" );
+      var grandTotal = 0;
+      for( var item in cart ) {
+        var qty = cart[item].qty;
+        var name = cart[item].name;
+        var price = cart[item].price;
+        var subtotal = qty * price;
+        grandTotal += subtotal;
+        cartDiv.append( '<p>' + qty + ' ea ' + name + ' @ $' + price.toFixed( 2 ) +
+                        ' = ' + '$ ' + subtotal.toFixed( 2 ) + '</p>' );
+      }
+      cartDiv.append( '<p>Grand Total: $' + grandTotal.toFixed( 2 ) + '</p>' );
+    }
+
+    $( '#buy' ).on( "click", function( event ) {
+      var buyUrl = "";
+      for( var item in cart ) {
+        buyUrl += "&pid[]=" + item + "&qty[]=" + cart[item].qty
+      }
+
+      $.getJSON( 'buy.php?' + buyUrl, function( data ) {
+        $( "#cartDiv" ).append( data );
+      } )
+
+      $( '#buy' ).parent().hide();
+      console.log( "http://cis217-4.dougduke.info/buy.php?" + buyUrl );
+    } )
+
+    $( '#saveOrder' ).on( "click", function( event ) {
+      var cartStr = "[";
+      for(var item in cart ) {
+        cartStr += JSON.stringify( cart[item] ) + ",";
+      }
+      cartStr = cartStr.slice(0, -1);
+      cartStr += "]";
+      console.log( cartStr );
+      localStorage['cart'] = cartStr;
+    } )
+
+    $( '#loadOrder' ).on( "click", function() {
+      cart = [];
+      var obj = JSON.parse( localStorage['cart'] );
+      for( item in obj ) {
+        pid = obj[item].pid;
+        cart[ pid ] = obj[item];
+      }
+      displayCart();
+    } )
+
+
+  } )
+
+</script>
+</body>
+</html>
