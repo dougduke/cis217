@@ -1,17 +1,41 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Doug Duke
  * Date: 7/31/14
  * Time: 1:38 PM
  */
-echo '<h1> Purchase Page </h1>';
-  echo 'post';
+
   $name = $_POST[name];
-  echo 'name ' + $name;
   $address = $_POST[address];
-  echo $address;
-  $submit = $_POST[Submit];
-  echo $submit;
+  $submit = $_POST[submit];
+  $purch = $_POST[purchase];
 
+//  echo 'name ' + $name;
+//  echo $address;
+//  echo $submit;
 
+  $purchase =<<<PURCH
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Page Title</title>
+</head>
+<body>
+<section class="container">
+  <h1>Purchase Page</h1>
+  <p> 'name ' + $name;</p>
+  <p> 'address' + $address</p>
+</section>
+</body>
+</html>
+
+PURCH;
+
+  echo $purchase;
+  $message = "Name: " . $name . "\nAddress" . $address . "\nOrder: " . $purch . "";
+  mail('doug.duke@rocketmail.com', 'Pizza Order', $message);
+  echo "message sent";
