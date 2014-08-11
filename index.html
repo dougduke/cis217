@@ -8,22 +8,6 @@
 </head>
 <body>
 
-
-<!--
-  WARNING: Collection and use of geolocation data raises important privacy issues.
-  Your app's privacy policy should discuss how the app uses geolocation data,
-  whether it is shared with any other parties,
-  and the level of precision of the data (for example, coarse, fine, ZIP code level, etc.).
-  Geolocation data is generally considered sensitive because it can reveal user's whereabouts and,
-  if stored, the history of their travels.
-  Therefore, in addition to the app's privacy policy,
-  you should strongly consider providing a just-in-time notice before the app accesses geolocation data
-  (if the device operating system doesn't do so already).
-  That notice should provide the same information noted above,
-  as well as obtaining the user's permission (e.g., by presenting choices for OK and No Thanks).
-  For more information, please see the Privacy Guide.
--->
-
 <div data-role="page" id="main">
 
   <div data-role="header" data-id="navbar" data-position="fixed">
@@ -204,19 +188,30 @@
   </div>
 
   <div data-role="content">
-    <p>Map</p>
-    <script>
-      navigator.geolocation.getCurrentPosition( function( pos ) {
-        var lat = pos.coords.latitude;
-        var lng = pos.coords.longitude;
-        $( "#lat" ).text( lat );
-        $( "#lng" ).text( lng );
-        var url = '<a href="http://maps.google.com/maps/dir/' + lat + ',' + lng + '/Round+Table+Pizza,+4510+S+Regal+St,+Spokane,+WA+99223">Directions</a>';
-        $( "#url" ).append( url );
 
-        var map = '<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d10759.004143191545!2d' + lng + '!3d' + lat + '!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!1i0!3e6!4m4!2s47.6118789%2C+-117.36149619999999+!3m2!1d47.6118789!2d-117.36149619999999!4m5!1s0x549e22557a31c4e3%3A0x19f835642ced293c!2sRound+Table+Pizza%2C+4510+S+Regal+St%2C+Spokane%2C+WA+99223!3m2!1d47.612369!2d-117.36944799999999!5e0!3m2!1sen!2sus!4v1406788439736" width="360" height="360" frameborder="0" style="border:0"></iframe>'
-        $( "#directionMap" ).html( map );
-      } )
+    <p>NOTICE: This application does not share your geolocation data with any other party.</p>
+
+    <p>Map</p>
+
+
+    <script>
+
+      document.addEventListener( "deviceready", onDeviceReady, false );
+
+      function onDeviceReady() {
+
+        navigator.geolocation.getCurrentPosition( function( pos ) {
+          var lat = pos.coords.latitude;
+          var lng = pos.coords.longitude;
+          $( "#lat" ).text( lat );
+          $( "#lng" ).text( lng );
+          var url = '<a href="http://maps.google.com/maps/dir/' + lat + ',' + lng + '/Round+Table+Pizza,+4510+S+Regal+St,+Spokane,+WA+99223">Directions</a>';
+          $( "#url" ).append( url );
+
+          var map = '<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d10759.004143191545!2d' + lng + '!3d' + lat + '!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!1i0!3e6!4m4!2s47.6118789%2C+-117.36149619999999+!3m2!1d47.6118789!2d-117.36149619999999!4m5!1s0x549e22557a31c4e3%3A0x19f835642ced293c!2sRound+Table+Pizza%2C+4510+S+Regal+St%2C+Spokane%2C+WA+99223!3m2!1d47.612369!2d-117.36944799999999!5e0!3m2!1sen!2sus!4v1406788439736" width="360" height="360" frameborder="0" style="border:0"></iframe>'
+          $( "#directionMap" ).html( map );
+        } )
+      }
     </script>
 
     <div id="directionMap"></div>
@@ -245,10 +240,15 @@
 
   <div data-role="content">
     <img src="img/flickr_farmShed.jpg">
+
     <h2>About Us:</h2>
+
     <p>The object is to allow you to tell us what kind of pizza you want. </p>
+
     <p>It's your pizza, right? </p>
+
     <p>Call us directly from the CALL US link above, or call (555) 555-5555</p>
+
     <p>Or stop by at:</p>
     <pre>
       Pizza Shed
@@ -325,10 +325,10 @@
 
     $( '#saveOrder' ).on( "click", function( event ) {
       var cartStr = "[";
-      for(var item in cart ) {
+      for( var item in cart ) {
         cartStr += JSON.stringify( cart[item] ) + ",";
       }
-      cartStr = cartStr.slice(0, -1);
+      cartStr = cartStr.slice( 0, - 1 );
       cartStr += "]";
       console.log( cartStr );
       localStorage['cart'] = cartStr;
