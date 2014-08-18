@@ -4,6 +4,16 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHP">
+        <CLASSES>
+          <root url="file://C:/Bitnami/rubystack-1.9.3-24/php/PEAR" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://C:/Bitnami/rubystack-1.9.3-24/php/PEAR" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>
 
