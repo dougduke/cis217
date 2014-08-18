@@ -312,7 +312,7 @@
     $( '#buy' ).on( "click", function( event ) {
       var buyUrl = "";
       for( var item in cart ) {
-        buyUrl += "&pid[]=" + item + "&qty[]=" + cart[item].qty + "\""
+        buyUrl += "&pid[]=" + item + "&qty[]=" + cart[item].qty
       }
 
       $.getJSON( 'buy.php?' + buyUrl, function( data ) {
